@@ -45,21 +45,31 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 90px;
             }
 
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
-                font-size: 13px;
+                font-size: 24px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
             }
+            
+            .p{
+                color: #636b6f;
+                padding: 0 25px;
+                font-size: 24px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase; 
+            }
 
             .m-b-md {
-                margin-bottom: 30px;
+                margin-bottom: 100px;
             }
         </style>
     </head>
@@ -68,12 +78,12 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/mypage') }}">マイページ</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}">ログイン</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}">アカウント作成</a>
                         @endif
                     @endauth
                 </div>
@@ -85,12 +95,9 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">問い合わせ</a>
-                    <a href="{{ action('Admin\RequestController@reqOver') }}">残業申請</a>
-                    <a href="https://laravel-news.com">事務所鍵管理</a>
-                    <a href="https://blog.laravel.com">棚管理</a>
-                    <a href="{{ action('Admin\RequestController@holiOver') }}">有給申請</a>
-                    <a href="https://forge.laravel.com">業務連絡</a>
+                    <a href="{{ action('Admin\RequestController@Home') }}">申請システム</a>
+                    <a href="{{ action('Admin\ManageController@Home') }}">管理システム</a>
+                    <a href="{{ action('Admin\ContactController@Home') }}">連絡システム</a>
                 </div>
             </div>
         </div>

@@ -7,13 +7,18 @@ use Illuminate\Http\Request;
 
 class RequestController extends Controller
 {
+    // 総合申請画面の表示
+    public function Home(){
+        return view('admin.home.request');
+    }
+    
     //残業申請画面の表示
-    public function reqOver(){
-        return view('admin.overwork.request');
+    public function Overwork(){
+        return view('admin.request.overwork');
     }
     
      //有給申請画面の表示
-    public function holiOver(){
-        return view('admin.holiday.request');
+    public function Holiday(){
+        return view('admin.request.holiday');
     }
 }

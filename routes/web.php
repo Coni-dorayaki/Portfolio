@@ -18,6 +18,20 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'admin'],function() {
-    Route::get('overwork/request','Admin\RequestController@reqOver');
-    Route::get('holiday/request','Admin\RequestController@holiOver');
+    Route::get('home/request','Admin\RequestController@Home')->middleware('auth');
+    Route::get('request/overwork','Admin\RequestController@Overwork')->middleware('auth');
+    Route::get('request/holiday','Admin\RequestController@Holiday')->middleware('auth');
+    Route::get('home/manage','Admin\ManageController@Home')->middleware('auth');
+    Route::get('management/key','Admin\ManageController@Key')->middleware('auth');
+    Route::get('management/prove','Admin\ManageController@Provenance')->middleware('auth');
+    Route::get('management/shelf','Admin\ManageController@Shelf')->middleware('auth');
+    Route::get('management/diagram','Admin\ManageController@Diagram')->middleware('auth');
+    Route::get('home/contact','Admin\ContactController@Home')->middleware('auth');
+    Route::get('contact/bulletin','Admin\ContactController@Bulletin')->middleware('auth');
+    Route::get('contact/inquiry','Admin\ContactController@Inquiry')->middleware('auth');
+    
 });
+
+Auth::routes();
+
+Route::get('/mypage', 'MypageController@index')->name('mypage');
