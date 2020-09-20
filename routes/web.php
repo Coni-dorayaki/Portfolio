@@ -17,19 +17,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix' => 'admin'],function() {
-    Route::get('home/request','Admin\RequestController@Home')->middleware('auth');
-    Route::get('request/overwork','Admin\RequestController@Overwork')->middleware('auth');
-    Route::get('request/holiday','Admin\RequestController@Holiday')->middleware('auth');
-    Route::get('home/manage','Admin\ManageController@Home')->middleware('auth');
-    Route::get('management/key','Admin\ManageController@Key')->middleware('auth');
-    Route::get('management/prove','Admin\ManageController@Provenance')->middleware('auth');
-    Route::get('management/shelf','Admin\ManageController@Shelf')->middleware('auth');
-    Route::get('management/diagram','Admin\ManageController@Diagram')->middleware('auth');
-    Route::get('home/contact','Admin\ContactController@Home')->middleware('auth');
-    Route::get('contact/bulletin','Admin\ContactController@Bulletin')->middleware('auth');
-    Route::get('contact/inquiry','Admin\ContactController@Inquiry')->middleware('auth');
-    
+Route::group(['prefix' => 'admin','middleware' => 'auth'],function() {
+    Route::get('home/request','Admin\RequestController@Home');
+    Route::get('request/overwork','Admin\RequestController@Overwork');
+    Route::get('request/holiday','Admin\RequestController@Holiday');
+    Route::get('home/manage','Admin\ManageController@Home');
+    Route::get('management/key','Admin\ManageController@Key');
+    Route::get('management/prove','Admin\ManageController@Provenance');
+    Route::get('management/shelf','Admin\ManageController@Shelf');
+    Route::get('management/diagram','Admin\ManageController@Diagram');
+    Route::get('home/contact','Admin\ContactController@Home');
+    Route::get('contact/bulletin','Admin\ContactController@Bulletin');
+    Route::get('contact/inquiry','Admin\ContactController@Inquiry');
+    Route::post('request/overwork', 'Admin\RequestController@sendOverwork');
+    Route::get('overwork', 'Admin\RequestController@index');
 });
 
 Auth::routes();

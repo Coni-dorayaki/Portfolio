@@ -1,14 +1,81 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charaset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE-edge">
-        <meta name="viewport" content="width=device-width, initial-scala=1">
-        
-        <title>残業申請</title>
-    </head>
-    <body>
-        <h1>残業申請ページ</h1>
-    </body>
-</html>
+@extends('layouts.app')
+@section('title', '残業申請用フォーム')
 
+@section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <h2>新規残業申請</h2>
+                <form action="{{ action('Admin\RequestController@sendOverwork') }}" method="post" enctype="multipart/form-data">
+
+
+                    @if (count($errors) > 0)
+                        <ul>
+                            @foreach($errors->all() as $e)
+                                <li>{{ $e }}</li>
+                            @endforeach
+                        </ul>
+                    @endif
+                    
+                    <div class="form-group row">
+                        <label class="col-md-2" for="requestday">申請日</label>
+                        <div class="col-md-10">
+                            <input type="date" class="form-control" name="requestday" value="{{ old('requestday') }}">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2" for="start">開始時間</label>
+                        <div class="col-md-10">
+                            <input type="time" class="form-control" name="start" value="{{ old('start') }}">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2" for="end">終了時間</label>
+                        <div class="col-md-10">
+                            <input type="time" class="form-control" name="end" value="{{ old('end') }}">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2" for="worktimeA">残業時間A</label>
+                        <div class="col-md-10">
+                            
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2" for="requestday">残業時間B</label>
+                        <div class="col-md-10">
+                            
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2" for="requestday">残業時間C</label>
+                        <div class="col-md-10">
+                            
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2" for="requestday">残業時間D</label>
+                        <div class="col-md-10">
+                            
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2" for="place">残業場所</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" name="place" value="{{ old('place') }}">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2" for="reason">残業理由</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" name="reason" value="{{ old('reason') }}">
+                        </div>
+                    </div>
+                    
+                    {{ csrf_field() }}
+                    <input type="submit" class="btn btn-primary" value="送信">
+                </form>
+            </div>
+        </div>
+    </div>
+@endsection
