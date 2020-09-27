@@ -18,19 +18,32 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'admin','middleware' => 'auth'],function() {
+    //Home処理
     Route::get('home/request','Admin\RequestController@Home');
-    Route::get('request/overwork','Admin\RequestController@Overwork');
-    Route::get('request/holiday','Admin\RequestController@Holiday');
     Route::get('home/manage','Admin\ManageController@Home');
-    Route::get('management/key','Admin\ManageController@Key');
-    Route::get('management/prove','Admin\ManageController@Provenance');
-    Route::get('management/shelf','Admin\ManageController@Shelf');
-    Route::get('management/diagram','Admin\ManageController@Diagram');
     Route::get('home/contact','Admin\ContactController@Home');
+    //残業申請処理
+    Route::get('request/overwork','Admin\RequestController@Overwork');
+    Route::post('request/overwork', 'Admin\RequestController@sendOverwork');
+    Route::get('overwork', 'Admin\RequestController@overIndex');
+    Route::get('overwork/edit', 'Admin\RequestController@overEdit');
+    Route::post('overwork/edit', 'Admin\RequestController@overUpdate');
+    //休暇申請処理
+    Route::get('request/holiday','Admin\RequestController@Holiday');
+    Route::post('request/holiday', 'Admin\RequestController@sendHoliday');
+    Route::get('holiday', 'Admin\RequestController@holiIndex');
+    Route::get('holiday/edit', 'Admin\RequestController@holiEdit');
+    Route::post('holiday/edit', 'Admin\RequestController@holiUpdate');
+    //管理処理
+    Route::get('management/key','Admin\ManageController@Key');
+    Route::get('management/shelf','Admin\ManageController@Shelf');
+    
     Route::get('contact/bulletin','Admin\ContactController@Bulletin');
     Route::get('contact/inquiry','Admin\ContactController@Inquiry');
-    Route::post('request/overwork', 'Admin\RequestController@sendOverwork');
-    Route::get('overwork', 'Admin\RequestController@index');
+    //問合せフォーム処理
+    Route::post('contact/inquiry', 'Admin\ContactController@sendInquiry');
+    Route::get('inquiry', 'Admin\ContactController@inquIndex');
+    
 });
 
 Auth::routes();

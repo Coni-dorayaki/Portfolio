@@ -17,18 +17,10 @@ class ManageController extends Controller
         return view('admin.management.key');
     }
     
-     //来歴簿管理の表示
-    public function Provenance(){
-        return view('admin.management.prove');
-    }
     
     //棚管理の表示
     public function Shelf(){
         return view('admin.management.shelf');
     }
     
-    //図面管理の表示
-    public function Diagram(){
-        return view('admin.management.diagram');
-    }
 }
