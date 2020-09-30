@@ -19,4 +19,7 @@ return [
     'Send Password Reset Link' => 'リセット用リンクを送信',
     'HOME' => 'ホーム',
     'Mypage' => 'マイページ',
+    'area' => '所属拠点',
+    'employeeNumber' => '社員番号',
+    
 ];

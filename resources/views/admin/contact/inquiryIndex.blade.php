@@ -8,7 +8,7 @@
         </div>
         <div class="row">
             <div class="col-md-4">
-                <a href="{{ action('Admin\ContactController@inquiry) }}" role="button" class="btn btn-primary">新規</a>
+                <a href="{{ action('Admin\ContactController@Inquiry') }}" role="button" class="btn btn-primary">新規</a>
             </div>
             <div class="col-md-8">
                 <form action="{{ action('Admin\ContactController@inquIndex') }}" method="get">
@@ -42,15 +42,15 @@
                         <tbody>
                             @foreach($posts as $inquiry)
                                 <tr>
-                                    <th>{{ $holiday->id }}</th>
-                                    <th>{{ $holiday->requestday }}</th>
-                                    <th>{{ $holiday->appclass }}</th>
-                                    <th>{{ $holiday->start }}</th>
-                                    <th>{{ $holiday->end }}</th>
-                                    <th>{{ $holiday->alltime}}</th>
+                                    <th>{{ $inquiry->id }}</th>
+                                    <th>{{ $inquiry->companyname }}</th>
+                                    <th>{{ $inquiry->name }}</th>
+                                    <th>{{ $inquiry->telnumber }}</th>
+                                    <th>{{ $inquiry->usemachine }}</th>
+                                    <th>{{ $inquiry->body}}</th>
                                 </tr>
                                 <div>
-                                    <a href="{{ action('Admin\RequestController@holiEdit', ['id' => $holiday->id]) }}">再申請</a>
+                                    <a href="{{ action('Admin\RequestController@holiEdit', ['id' => $inquiry->id]) }}">再申請</a>
                                 </div>
                             @endforeach
                         </tbody>

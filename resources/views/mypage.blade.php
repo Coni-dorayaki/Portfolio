@@ -15,10 +15,14 @@
                     @endif
 
                     {{ __('ログインできました！') }}
+                    
                 </div>
-                
-                <a href="{{ action('Admin\ContactController@Home') }}">週報提出</a>
-                
+                <div>
+                    <a href="{{ action('MypageController@report') }}" role="button" class="btn btn-primary">週報提出</a>
+                </div>
+                <div>
+                    <a href="{{ action('MypageController@reportIndex') }}" role="button" class="btn btn-primary">週報一覧</a>
+                </div>
             </div>
         </div>
     </div>

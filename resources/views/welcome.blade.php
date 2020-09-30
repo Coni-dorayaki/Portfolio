@@ -78,7 +78,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/mypage') }}">マイページ</a>
+                        <a href="{{ action('MypageController@index') }}">マイページ</a>
                     @else
                         <a href="{{ route('login') }}">ログイン</a>
 

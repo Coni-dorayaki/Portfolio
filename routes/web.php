@@ -37,15 +37,20 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'],function() {
     //管理処理
     Route::get('management/key','Admin\ManageController@Key');
     Route::get('management/shelf','Admin\ManageController@Shelf');
-    
     Route::get('contact/bulletin','Admin\ContactController@Bulletin');
     Route::get('contact/inquiry','Admin\ContactController@Inquiry');
     //問合せフォーム処理
     Route::post('contact/inquiry', 'Admin\ContactController@sendInquiry');
     Route::get('inquiry', 'Admin\ContactController@inquIndex');
-    
+});
+
+Route::group(['prefix' => 'mypage','middleware' => 'auth'],function() {
+   Route::get('main', 'MypageController@index');
+   Route::get('report/new', 'MypageController@report');
+   Route::post('report/new', 'MypageController@sendReport');
+   Route::get('report', 'MypageController@reportIndex');
+   Route::get('report/edit', 'MypageController@reportEdit');
+   Route::post('report/edit', 'MypageController@reportUpdate');
 });
 
 Auth::routes();
-
-Route::get('/mypage', 'MypageController@index')->name('mypage');

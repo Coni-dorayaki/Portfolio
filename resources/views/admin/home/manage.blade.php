@@ -7,8 +7,8 @@
             <div class="card">
                 <div class="card-header">管理システム TSUKUYOMI</div>
                 
-                <a href="{{ action('Admin\ManageController@Key') }}">事務所鍵管理</a>
-            　　<a href="{{ action('Admin\ManageController@Shelf') }}">棚管理</a>
+                <a href="{{ action('Admin\ManageController@Key') }}" role="button" class="btn btn-primary">事務所鍵管理</a>
+            　　<a href="{{ action('Admin\ManageController@Shelf') }}" role="button" class="btn btn-primary">棚管理</a>
                 
             </div>
         </div>
