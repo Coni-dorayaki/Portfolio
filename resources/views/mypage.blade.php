@@ -17,12 +17,23 @@
                     {{ __('ログインできました！') }}
                     
                 </div>
+                
                 <div>
-                    <a href="{{ action('MypageController@report') }}" role="button" class="btn btn-primary">週報提出</a>
+                    <a href="{{ action('Admin\RequestController@overIndex') }}" role="button" class="btn btn-primary">残業申請一覧</a>
                 </div>
+                
                 <div>
-                    <a href="{{ action('MypageController@reportIndex') }}" role="button" class="btn btn-primary">週報一覧</a>
+                    <a href="{{ action('Admin\RequestController@holiIndex') }}" role="button" class="btn btn-primary">休暇申請一覧</a>
                 </div>
+                
+                <div>
+                    <a href="{{ action('MypageController@reportIndex') }}" role="button" class="btn btn-primary">週報提出一覧</a>
+                </div>
+                
+                <div>
+                    <a href="{{ action('Admin\ContactController@inquIndex') }}" role="button" class="btn btn-primary">情報展開一覧</a>
+                </div>
+                
             </div>
         </div>
     </div>

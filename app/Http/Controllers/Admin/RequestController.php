@@ -9,10 +9,6 @@ use App\Holiday;
 
 class RequestController extends Controller
 {
-    // 総合申請画面の表示
-    public function Home(){
-        return view('admin.home.request');
-    }
     
     //残業申請画面の表示
     public function Overwork(){

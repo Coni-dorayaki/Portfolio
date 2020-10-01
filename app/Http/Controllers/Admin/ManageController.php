@@ -7,10 +7,6 @@ use Illuminate\Http\Request;
 
 class ManageController extends Controller
 {
-    // 総合管理画面の表示
-    public function Home(){
-        return view('admin.home.manage');
-    }
     
     //鍵管理の表示
     public function Key(){

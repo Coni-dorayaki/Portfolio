@@ -95,9 +95,11 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{ action('Admin\RequestController@Home') }}">申請システム</a>
-                    <a href="{{ action('Admin\ManageController@Home') }}">管理システム</a>
-                    <a href="{{ action('Admin\ContactController@Home') }}">連絡システム</a>
+                    <a href="{{ action('Admin\RequestController@Overwork') }}">残業申請</a>
+                    <a href="{{ action('Admin\RequestController@Holiday') }}">休暇申請</a>
+                    <a href="{{ action('MypageController@report') }}">週報提出</a>
+                    <a href="{{ action('Admin\ContactController@Inquiry') }}">情報展開</a>
+                    <a href="{{ action('Admin\ManageController@Key') }}">事務所鍵</a>
                 </div>
             </div>
         </div>
