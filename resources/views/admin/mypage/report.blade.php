@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 @section('title', '週報提出ページ')
 
 @section('content')
@@ -18,15 +18,24 @@
                     @endif
                     
                     <div class="form-group row">
-                        <label class="col-md-2" for="startday">週開始日</label>
-                        <div class="col-md-10">
-                            <input type="date" class="form-control" name="startday" value="{{ old('startday') }}">
+                        <label class="col-md-2" for="startday">行動報告</label>
+                        <div class="col-md-4">
+                            <input type="date" class="form-control" name="days_1" value="{{ old('days_1') }}">
+                            <input type="date" class="form-control" name="days_2" value="{{ old('days_2') }}">
+                            <input type="date" class="form-control" name="days_3" value="{{ old('days_3') }}">
+                            <input type="date" class="form-control" name="days_4" value="{{ old('days_4') }}">
+                            <input type="date" class="form-control" name="days_5" value="{{ old('days_5') }}">
+                            <input type="date" class="form-control" name="days_6" value="{{ old('days_6') }}">
+                            <input type="date" class="form-control" name="days_7" value="{{ old('days_7') }}">
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-md-2" for="actionreport">行動報告</label>
-                        <div class="col-md-10">
-                            <textarea class="form-control" name="actionreport" rows="15">{{ old('actionreport') }}</textarea>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" name="actionreport_1" value="{{ old('actionreport_1') }}">
+                            <input type="text" class="form-control" name="actionreport_2" value="{{ old('actionreport_2') }}">
+                            <input type="text" class="form-control" name="actionreport_3" value="{{ old('actionreport_3') }}">
+                            <input type="text" class="form-control" name="actionreport_4" value="{{ old('actionreport_4') }}">
+                            <input type="text" class="form-control" name="actionreport_5" value="{{ old('actionreport_5') }}">
+                            <input type="text" class="form-control" name="actionreport_6" value="{{ old('actionreport_6') }}">
+                            <input type="text" class="form-control" name="actionreport_7" value="{{ old('actionreport_7') }}">
                         </div>
                     </div>
                     <div class="form-group row">

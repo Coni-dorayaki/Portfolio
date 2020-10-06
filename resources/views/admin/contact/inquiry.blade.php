@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 @section('title', '問い合わせフォーム')
 
 @section('content')
@@ -56,7 +56,7 @@
                     <div class="form-group row">
                         <label class="col-md-2" for="document">添付資料</label>
                         <div class="col-md-10">
-                            <input type="file" class="form-control" name="document" value="{{ old('document') }}">
+                            <input type="file" name="document" value="{{ old('document') }}">
                         </div>
                     </div>
                     <div class="form-group row">

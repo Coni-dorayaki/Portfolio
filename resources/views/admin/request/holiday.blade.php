@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 @section('title', '休暇申請用フォーム')
 
 @section('content')

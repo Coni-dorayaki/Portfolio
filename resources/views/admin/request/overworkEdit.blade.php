@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 @section('title', '残業再申請用フォーム')
 
 @section('content')
