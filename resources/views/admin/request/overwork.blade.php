@@ -36,27 +36,9 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2" for="worktimeA">残業時間A</label>
+                        <label class="col-md-2" for="worktime">残業時間</label>
                         <div class="col-md-10">
-                        <input type="text" class="form-control" name="worktimeA" value="{{ old('worktimeA') }}">    
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-md-2" for="worktimeB">残業時間B</label>
-                        <div class="col-md-10">
-                        <input type="text" class="form-control" name="worktimeB" value="{{ old('worktimeB') }}">    
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-md-2" for="worktimeC">残業時間C</label>
-                        <div class="col-md-10">
-                        <input type="text" class="form-control" name="worktimeC" value="{{ old('worktimeC') }}">    
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-md-2" for="worktimeD">残業時間D</label>
-                        <div class="col-md-10">
-                        <input type="text" class="form-control" name="worktimeD" value="{{ old('worktimeD') }}">   
+                        <input type="text" class="form-control" name="worktime" value="{{ old('worktime') }}">    
                         </div>
                     </div>
                     <div class="form-group row">

@@ -48,6 +48,9 @@
                                 <div>
                                     <a href="{{ action('MypageController@reportEdit', ['id' => $report->id]) }}">再提出</a>
                                 </div>
+                                <div>
+                                    <a href="{{ action('MypageController@reportEdit', ['id' => $report->id]) }}">表示</a>
+                                </div>
                             @endforeach
                         </tbody>
                     </table>

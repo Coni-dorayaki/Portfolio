@@ -26,35 +26,37 @@
             </div>
         </div>
         <div class="row">
-            <div class="list-news col-md-12 mx-auto">
+            <div class="list-overwork col-md-12 mx-auto">
                 <div class="row">
                     <table class="table table-dark">
                         <thead>
                             <tr>
-                                <th width="10%">ID</th>
+                                <th width="10%">申請者</th>
+                                <th width="12%">申請日</th>
                                 <th width="10%">開始時間</th>
                                 <th width="10%">終了時間</th>
-                                <th width="5%">残業時間A</th>
-                                <th width="5%">残業時間B</th>
+                                <th width="10%">残業時間</th>
                                 <th width="10%">残業場所</th>
-                                <th width="10%">残業理由</th>
+                                <th width="20%">残業理由</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($posts as $overwork)
+                                @foreach($posts_work as $overwork)
                                 <tr>
-                                    <th>{{ $overwork->id }}</th>
-                                    <th>{{ $overwork->start }}</th>
-                                    <th>{{ $overwork->end }}</th>
-                                    <th>{{ $overwork->worktimeA }}</th>
-                                    <th>{{ $overwork->worktimeB }}</th>
-                                    <th>{{ $overwork->place }}</th>
-                                    <th>{{ $overwork->reason }}</th>
+                                    <th>{{ $overwork->user_name }}</th>
+                                    <td>{{ $overwork->requestday }}</td>
+                                    <td>{{ $overwork->start }}</td>
+                                    <td>{{ $overwork->end }}</td>
+                                    <td>{{ $overwork->worktime }}</td>
+                                    <td>{{ $overwork->place }}</td>
+                                    <td>{{ $overwork->reason }}</td>
+                                    <td>
+                                        <div>
+                                             <a href="{{ action('Admin\RequestController@overEdit', ['id' => $overwork->id]) }}">再申請</a>
+                                        </div>
+                                    </td>
+                                    @endforeach
                                 </tr>
-                                <div>
-                                    <a href="{{ action('Admin\RequestController@overEdit', ['id' => $overwork->id]) }}">再申請</a>
-                                </div>
-                            @endforeach
                         </tbody>
                     </table>
                 </div>

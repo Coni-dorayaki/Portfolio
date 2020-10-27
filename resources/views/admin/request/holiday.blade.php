@@ -41,12 +41,6 @@
                             <input type="time" class="form-control" name="end" value="{{ old('end') }}">
                         </div>
                     </div>
-                    <div class="form-group row">
-                        <label class="col-md-2" for="alltime">申請時間</label>
-                        <div class="col-md-10">
-                            <input type="text" class="form-control" name="alltime" value="{{ old('alltime') }}">
-                        </div>
-                    </div>
                     
                     
                     {{ csrf_field() }}

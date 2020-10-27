@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
 @section('content')
 <div class="container">
@@ -32,34 +32,6 @@
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                 @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-                        
-                        <div class="form-group row">
-                            <label for="area" class="col-md-4 col-form-label text-md-right">{{ __('messages.area') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="area" type="text" class="form-control @error('area') is-invalid @enderror" name="area" value="{{ old('area') }}" required autocomplete="area" autofocus>
-
-                                @error('area')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-                        
-                        <div class="form-group row">
-                            <label for="employeeNumber" class="col-md-4 col-form-label text-md-right">{{ __('messages.employeeNumber') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="employeeNumber" type="text" class="form-control @error('employeeNumber') is-invalid @enderror" name="employeeNumber" value="{{ old('employeeNumber') }}" required autocomplete="employeeNumber" autofocus>
-
-                                @error('employeeNumber')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

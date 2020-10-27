@@ -26,6 +26,7 @@ class RequestController extends Controller
       $this->validate($request, Overwork::$rules);
       
       $overwork = new Overwork;
+      $overwork->user_name = $request->user()->name;
       $form = $request->all();
       
       // フォームから送信されてきた_tokenを削除する
@@ -43,12 +44,12 @@ class RequestController extends Controller
       $cond_title = $request->cond_title;
       if ($cond_title != '') {
           // 検索されたら検索結果を取得する
-          $posts = Overwork::where('requestday', $cond_title)->get();
+          $posts_work = Overwork::where('requestday', $cond_title)->get();
       } else {
           // それ以外はすべての情報を取得する
-          $posts = Overwork::all();
+          $posts_work = Overwork::all();
       }
-      return view('admin.request.overworkIndex', ['posts' => $posts, 'cond_title' => $cond_title]);
+      return view('admin.request.overworkIndex', ['posts_work' => $posts_work, 'cond_title' => $cond_title]);
   }
   
   public function overEdit(Request $request)
@@ -84,6 +85,7 @@ class RequestController extends Controller
       $this->validate($request, Holiday::$rules);
       
       $holiday = new Holiday;
+      $holiday->user_name = $request->user()->name;
       $form = $request->all();
       
       // フォームから送信されてきた_tokenを削除する

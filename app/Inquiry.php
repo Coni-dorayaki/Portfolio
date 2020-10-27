@@ -12,10 +12,7 @@ class Inquiry extends Model
     public static $rules = array(
         'companyname' => 'required',
         'name' => 'required',
-        'to' => 'required',
-        'cc' => 'required',
         'telnumber' => 'required',
-        'usemachine' => 'required',
         'body' => 'required',
     );
 }

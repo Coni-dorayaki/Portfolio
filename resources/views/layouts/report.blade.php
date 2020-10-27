@@ -11,6 +11,10 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script type="text/javascript">
+        var date = document.getElementById("firstdate").value;
+        document.getElementById("output").innerHTML = date;
+    </script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">

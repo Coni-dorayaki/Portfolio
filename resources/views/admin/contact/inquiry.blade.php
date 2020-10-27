@@ -30,27 +30,9 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2" for="to">【TO】配信先</label>
-                        <div class="col-md-10">
-                            <input type="text" class="form-control" name="to" value="{{ old('to') }}">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-md-2" for="cc">【CC】配信先</label>
-                        <div class="col-md-10">
-                            <input type="text" class="form-control" name="cc" value="{{ old('cc') }}">
-                        </div>
-                    </div>
-                    <div class="form-group row">
                         <label class="col-md-2" for="telnumber">電話番号</label>
                         <div class="col-md-10">
                             <input type="tel" class="form-control" name="telnumber" value="{{ old('telnumber') }}">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-md-2" for="usemachine">使用製品</label>
-                        <div class="col-md-10">
-                            <input type="text" class="form-control" name="usemachine" value="{{ old('usemachine') }}">
                         </div>
                     </div>
                     <div class="form-group row">

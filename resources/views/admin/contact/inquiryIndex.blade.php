@@ -35,7 +35,6 @@
                                 <th width="15%">会社名</th>
                                 <th width="15%">担当者名</th>
                                 <th width="15%">電話番号</th>
-                                <th width="15%">使用製品</th>
                                 <th width="15%">内容</th>
                             </tr>
                         </thead>
@@ -46,7 +45,6 @@
                                     <th>{{ $inquiry->companyname }}</th>
                                     <th>{{ $inquiry->name }}</th>
                                     <th>{{ $inquiry->telnumber }}</th>
-                                    <th>{{ $inquiry->usemachine }}</th>
                                     <th>{{ $inquiry->body}}</th>
                                 </tr>
                                 <div>

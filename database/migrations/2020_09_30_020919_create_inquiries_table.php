@@ -17,10 +17,7 @@ class CreateInquiriesTable extends Migration
             $table->id();
             $table->string('companyname');  // 会社名
             $table->string('name');  // 担当者名
-            $table->string('to');  // TO送信先
-            $table->string('cc');  // CC送信先
             $table->string('telnumber');  // 電話番号
-            $table->string('usemachine');  // 使用機械
             $table->string('document')->nullable();  // 添付ファイル
             $table->string('body');  // 本文
             $table->timestamps();

@@ -51,6 +51,7 @@ Route::group(['prefix' => 'mypage','middleware' => 'auth'],function() {
    Route::get('report', 'MypageController@reportIndex');
    Route::get('report/edit', 'MypageController@reportEdit');
    Route::post('report/edit', 'MypageController@reportUpdate');
+   Route::get('userlist', 'MypageController@userlist');
 });
 
 Auth::routes();

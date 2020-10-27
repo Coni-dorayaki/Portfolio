@@ -15,13 +15,11 @@ class CreateOverworksTable extends Migration
     {
         Schema::create('overworks', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('user_name');  // リレーションしたユーザー名
             $table->date('requestday'); // 申請日
             $table->time('start');  // 開始時間
             $table->time('end');  // 終了時間
-            $table->integer('worktimeA');  // 残業時間A
-            $table->integer('worktimeB');  // 残業時間B
-            $table->integer('worktimeC');  // 残業時間C
-            $table->integer('worktimeD');  // 残業時間D
+            $table->string('worktime');  // 残業時間
             $table->string('place');  // 場所
             $table->string('reason');  // 理由
             $table->timestamps();

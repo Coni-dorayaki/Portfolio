@@ -12,8 +12,6 @@
                     <a href="{{ action('Admin\RequestController@Overwork') }}" role="button" class="btn btn-primary titlebtn">残業申請</a>
                     <a href="{{ action('Admin\RequestController@Holiday') }}" role="button" class="btn btn-primary titlebtn">休暇申請</a>
                     <a href="{{ action('MypageController@report') }}" role="button" class="btn btn-primary titlebtn">週報提出</a>
-                    <a href="{{ action('Admin\ContactController@Inquiry') }}" role="button" class="btn btn-primary titlebtn">情報展開</a>
-                    <a href="{{ action('Admin\ManageController@Key') }}" role="button" class="btn btn-primary titlebtn">事務所鍵</a>
                 </div>
                     
             </div>

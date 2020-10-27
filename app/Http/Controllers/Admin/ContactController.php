@@ -33,7 +33,7 @@ class ContactController extends Controller
     
     //問合フォーム送信履歴の一覧
     public function inquIndex(Request $request)
-  {
+    {
       $cond_title = $request->cond_title;
       if ($cond_title != '') {
           // 検索されたら検索結果を取得する
@@ -43,7 +43,7 @@ class ContactController extends Controller
           $posts = Inquiry::all();
       }
       return view('admin.contact.inquiryIndex', ['posts' => $posts, 'cond_title' => $cond_title]);
-  }
+    }
   
  
 }

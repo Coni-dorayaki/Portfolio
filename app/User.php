@@ -43,8 +43,18 @@ class User extends Authenticatable
     public static $rules = array(
         'name' => 'required',
         'email' => 'required',
-        'area' => 'required',
-        'employeeNumber' => 'required',
         'password' => 'required',
     );
+    
+    public function overworks(){
+    return $this->hasMany('App\Overwork');
+    }
+    
+    public function holidays(){
+    return $this->hasMany('App\Holiday');
+    }
+    
+    public function reports(){
+    return $this->hasMany('App\Report');
+    }
 }

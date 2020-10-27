@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.report')
 @section('title', '週報提出ページ')
 
 @section('content')
@@ -20,13 +20,8 @@
                     <div class="form-group row">
                         <label class="col-md-2" for="startday">行動報告</label>
                         <div class="col-md-4">
-                            <input type="date" class="form-control" name="days_1" value="{{ old('days_1') }}">
-                            <input type="date" class="form-control" name="days_2" value="{{ old('days_2') }}">
-                            <input type="date" class="form-control" name="days_3" value="{{ old('days_3') }}">
-                            <input type="date" class="form-control" name="days_4" value="{{ old('days_4') }}">
-                            <input type="date" class="form-control" name="days_5" value="{{ old('days_5') }}">
-                            <input type="date" class="form-control" name="days_6" value="{{ old('days_6') }}">
-                            <input type="date" class="form-control" name="days_7" value="{{ old('days_7') }}">
+                            <input type="date" id="firstdate" class="form-control" name="days_1" value="{{ old('days_1') }}">
+                            <div id="output"></div>
                         </div>
                         <div class="col-md-6">
                             <input type="text" class="form-control" name="actionreport_1" value="{{ old('actionreport_1') }}">

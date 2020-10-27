@@ -14,6 +14,9 @@ class Holiday extends Model
         'appclass' => 'required',
         'start' => 'required',
         'end' => 'required',
-        'alltime' => 'required',
     );
+    
+    public function user(){
+    return $this->belongsTo('App\User');
+    }
 }

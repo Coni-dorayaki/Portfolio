@@ -31,27 +31,27 @@
                     <table class="table table-dark">
                         <thead>
                             <tr>
-                                <th width="10%">ID</th>
+                                <th width="15%">申請者</th>
                                 <th width="15%">申請日</th>
                                 <th width="15%">申請区分</th>
                                 <th width="15%">開始時間</th>
                                 <th width="15%">終了時間</th>
-                                <th width="15%">申請時間</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach($posts as $holiday)
                                 <tr>
-                                    <th>{{ $holiday->id }}</th>
-                                    <th>{{ $holiday->requestday }}</th>
-                                    <th>{{ $holiday->appclass }}</th>
-                                    <th>{{ $holiday->start }}</th>
-                                    <th>{{ $holiday->end }}</th>
-                                    <th>{{ $holiday->alltime}}</th>
+                                    <th>{{ $holiday->user_name }}</th>
+                                    <td>{{ $holiday->requestday }}</th>
+                                    <td>{{ $holiday->appclass }}</th>
+                                    <td>{{ $holiday->start }}</th>
+                                    <td>{{ $holiday->end }}</th>
+                                    <td>
+                                        <div>
+                                             <a href="{{ action('Admin\RequestController@holiEdit', ['id' => $holiday->id]) }}">再申請</a>
+                                        </div>
+                                    </td>
                                 </tr>
-                                <div>
-                                    <a href="{{ action('Admin\RequestController@holiEdit', ['id' => $holiday->id]) }}">再申請</a>
-                                </div>
                             @endforeach
                         </tbody>
                     </table>

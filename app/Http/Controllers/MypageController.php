@@ -90,5 +90,22 @@ class MypageController extends Controller
 
       return redirect('admin/report');
   }
+  
+  public function reportDisplay(Request $request)
+  {
+      // News Modelからデータを取得する
+      $report = Report::find($request->id);
+      if (empty($report)) {
+        abort(404);    
+      }
+      return view('admin.mypage.reportDisplay', ['report' => $report]);
+  }
+  
+  //ユーザー情報の取得
+   public function userlist()
+    {
+        $users = User::All();
+        return view('userlist', ['users' => $users]);
+    }
     
 }

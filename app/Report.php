@@ -14,4 +14,8 @@ class Report extends Model
         'actionreport' => 'required',
         'topics' => 'required',
     );
+    
+    public function user(){
+    return $this->belongsTo('App\User');
+    }
 }

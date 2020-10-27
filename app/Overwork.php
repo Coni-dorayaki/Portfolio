@@ -13,11 +13,12 @@ class Overwork extends Model
         'requestday' => 'required',
         'start' => 'required',
         'end' => 'required',
-        'worktimeA' => 'required',
-        'worktimeB' => 'required',
-        'worktimeC' => 'required',
-        'worktimeD' => 'required',
+        'worktime' => 'required',
         'place' => 'required',
         'reason' => 'required',
     );
+    
+    public function user(){
+    return $this->belongsTo('App\User');
+    }
 }

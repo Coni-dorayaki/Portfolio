@@ -36,27 +36,9 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2" for="worktimeA">残業時間A</label>
+                        <label class="col-md-2" for="worktime">残業時間</label>
                         <div class="col-md-10">
-                        <input type="text" class="form-control" name="worktimeA" value="{{ $overwork_form->worktimeA }}">    
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-md-2" for="worktimeB">残業時間B</label>
-                        <div class="col-md-10">
-                        <input type="text" class="form-control" name="worktimeB" value="{{ $overwork_form->worktimeB }}">    
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-md-2" for="worktimeC">残業時間C</label>
-                        <div class="col-md-10">
-                        <input type="text" class="form-control" name="worktimeC" value="{{ $overwork_form->worktimeC }}">    
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-md-2" for="worktimeD">残業時間D</label>
-                        <div class="col-md-10">
-                        <input type="text" class="form-control" name="worktimeD" value="{{ $overwork_form->worktimeD }}">   
+                        <input type="text" class="form-control" name="worktime" value="{{ $overwork_form->worktime }}">    
                         </div>
                     </div>
                     <div class="form-group row">
