@@ -11,7 +11,6 @@
                 <div class="links">
                     <a href="{{ action('Admin\RequestController@Overwork') }}" role="button" class="btn btn-primary titlebtn">残業申請</a>
                     <a href="{{ action('Admin\RequestController@Holiday') }}" role="button" class="btn btn-primary titlebtn">休暇申請</a>
-                    <a href="{{ action('MypageController@report') }}" role="button" class="btn btn-primary titlebtn">週報提出</a>
                 </div>
                     
             </div>
